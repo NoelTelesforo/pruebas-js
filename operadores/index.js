@@ -6,9 +6,9 @@
 let c = 5;
 let d = 2;
 let e = c + d;
-document.getElementById("suma").innerHTML = e;
+// document.getElementById("suma").innerHTML;
 
-console.log("resultado de la suma= ", e)
+console.log("El resultado de la suma es = ", e)
 
 
 

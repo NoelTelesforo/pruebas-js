@@ -4,13 +4,2158 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <title>Document</title>
-   
 </head>
 <body>
-    <h1>JavaScript Operators</h1>
-    <h2>The = Operators</h2>
-   <p>Resultao de la suma</p> <p id="suma"></p>
+
+    <div class="container">
+        <div class="javascript">
+            <h1>¿Qué es JavaScript?</h1>
+            <p>Es un lenguaje de programación que nos permite dar funcionalidad a nuestra página web. Se puede ejecutar en el navegador; es decir, en el lado que ve el usuario y también se puede ejecutar en los servidores, en el backend. En el navegador JavaScript, permite agregar un nuevo html a la página, cambiar el contenido existente y modificar estilos, reaccionar a acciones del usuario como clicks del raton, movimientos del puntero o al oprimir teclas, también permite enviar solicitudes de red a servidores remotos, descargar y cargar archivos, obtener y configurar cookies,hacer preguntas al visitante y mostrar mensajes, etc.</p>
+        </div>
+        <hr>
+        <div class="variables">
+            <h2>Variables</h2>
+            Son contenedores para almacenar datos (almacenar valores de datos). <br>
+            En este ejemplo, <b>x, y</b> y <b>z</b>, son variables declaradas con la palabra clave <b>var</b>: <br><br>
+            var x = 5; <br>
+            var y = 6; <br>
+            var z = x + y; <br><br>
+            En este ejemplo, <b>x, y</b> y <b>z</b>, son variables declaradas con la palabra clave <b>let</b>. <br><br>
+            let x = 5; <br>
+            let y = 6; <br>
+            let z = x + y; <br><br>
+            En este ejemplo, <b>x, y </b> y <b>z</b>, son variables no declaradas: <br><br>
+            x = 5; <br>
+            y = 6; <br>
+            z = x + y; <br><br>
+            <h2 class="var">¿Cuándo usar var en JavaScript?</h2><br>
+            Declare siempre las variables de JavaScript con <b>var, let</b> o <b>const</b>. <br>
+            La palabra clave <b>var</b> se usa en todo el código de JavaScript desde 1995 hats 2015. <br>
+            Las palabras clave <b>let</b> y <b>const</b> se agregaron a JavaScript en 2015. <br><br>
+            <h2 class="const">¿Cuándo usar const en JavaScript?</h2><br>
+            Si se requiere una regla general: declara simpre las variables con <b>const</b>. <br>
+            Si cree que el valor de la variable puede cambiar, use <b>let</b>. <br>
+            En este ejemplo, <b>price1</b>, <b>price2</b> y <b>total</b>, son variables: <br><br>
+            const price1 = 5; <br>
+            const price2 = 6; <br>
+            let total = price1 + price2; <br><br>
+            Las dos variables <b>price1</b> y <b>price2</b> se declaran con la palabra clave <b>const</b>. <br>
+            Estos son valores constantes y no se pueden cambiar. <br> la variable <b>total</b> se declara con la palabra clave <b>let</b>. <br> este es unvalor que se puede cambiar. <br><br>
+        </div>
+        <hr>
+        <div class="algebra">
+            <h2>Al igual que en el álgebra</h2>
+            <p>Al igual que el álgebra, las variables tienen valores: <br><br>
+            let x = 5; <br>
+            let y = 6; <br><br>
+            Al igual que en el álgebra, las variables se usanen expresiones: <br><br>
+            let z = x + y; <br>
+            Del ejemplo anterior, puede adivinar que el totalse calcula en 11. <br><br>
+            </p>
+        </div>
+        <hr>
+        <div class="identificadores">
+            <h2>Identificadores</h2>
+            <p>Todas <b>las variables</b> de javascript deben <b>identificarse</b> con <b>nombres únicos</b>. <br>
+            Estos nombres únicos se denominan <b>identificadores</b>. <br>
+            Los identificadores pueden ser nombres cortos (como x e y) o nombres más descriptivos (edad, suma, volumen total). <br>
+            Las reglas generales para construir nombres para variables (identificadores únicos) son: <br>
+            <ul><li>Los nombres pueden contener letras, dígitos, guiones bajos y signos de dólar.</li></ul>
+            <ul><li>Los nombres deben comenzar con una letra.</li></ul>
+            <ul><li>Los nombres también pueden comenzar con $ y _ </li></ul>
+            <ul><li>Los nombres distingen entre máyusculas y minúsculas (y e Y son diferentes).</li></ul>
+            <ul><li>Las palabras reservadas (como las palabras claves de javascript) no se pueden usar como nombres.</li></ul>
+            </p>
+        </div>
+        <hr>
+        <div class="datos">
+            <h2>Tipos de datos de javascript</h2>
+            <p>
+                Las variables de javascript pueden contener números como 100 y valores de texto como "John Doe". <br>
+                En programación, los valores de texto se denominan cadenas de texto. <br>
+                JavaScript puede manejar muchos tipos de datos, pero por ahora, solo piense en números y cadenas. <br>
+                Las cadenas se escriben entre comillas simples o dobles. Los números se escriben sin comillas. <br><br>
+                Si pone un número entre comillas, se tratará como una cadena de texto. <br>
+                Ejemplo: <br><br>
+                const pi = 3.14; <br>
+                let person = "John Doe"; <br>
+                let answer = 'Yes I am!'; <br><br>
+            </p>
+        </div>
+        <hr>
+        <div class="declarar-ariable">
+            <h2>Declarar una variable de JavaScript</h2>
+            <p>Crear una variable en JavaScript se llama "declarar" una variable. <br>
+            Declaras una variable con la palabra clave <b>let</b> o <b>const</b>:<br><br>
+            var carName; <br> o <br> let carName; <br><br>
+            Despúes de la declaración, la variable no tiene valor (técnicamente lo es undefined). <br>
+            Para <b>asignar</b> un valor a la variable, utilice el signo igual: <br><br>
+            carName = "Volvo"; <br><br>
+            También puede asiganar un valor a la variable cuando la declara: <br><br>
+            let carName = "Volvo"; <br><br>
+            <h3>Una declaración, muchas variables.</h3>
+            Puede declarar muchas variables en una declaración. <br>
+            Comience la declaración con <b>let</b> y separe las variables con <b>comas</b>: <br><br>
+            let person =  "John Doe", carName = "Volvo", price = 200; <br><br>
+            Una declaración puede abarcar varias líneas: <br><br>
+            let person = "John Doe"; <br>
+            carName = "Volvo"; <br>
+            price = 200; <br><br>
+            <h3>Valor = indefinido</h3>
+            En los programas de computadora, las variables a menudo se declaran sin valor. El valor puede ser algo que debe calcularse o algo que se proporcionará más adelante, como una entrada del usuario. <br>
+            Una variable declarada sin valor tendrá el valor <b>undefined</b>. <br>
+            La variable carName tendrá el valor <b>undefined</b> después de la ejecución de esta instrucción: <br><br>
+            let carName; <br><br>
+            <h3>Redeclaración de variables de JavaScript</h3>
+            Si vuelve a declarar una variable de JavaScript declarada con <b>var</b>, no perderá su valor. <br>
+            La variable carName seguirá teniendo el valor "Volvo" después de la ejecución de estas sentencias: <br><br>
+            var carName = "Volvo"; <br>
+            var carName; <br><br>
+            <h3>Nota</h3>
+            No puede volver a declarar una variable declarada con <b>let</b> o <b>const</b>. <br>
+            Esto no funcionará: <br><br>
+            let carName = "Volvo"; <br>
+            let carName; <br><br>
+            </p>
+        </div>
+        <hr>
+        <div class="aritmetica">
+            <h2>Aritmética JavaScript</h2>
+            <p>
+                Al igual que con el álgebra, puedes hacer operaciones aritmeticas con variables de JavaScript, usando operadores como <b>=</b> y <b>+</b>: <br><br>
+                let x = 5 + 2 +3; <br><br>
+                También puede agregar cadenas, pero las cadenas se concatenarán: <br><br>
+                let x = "John" + " " + "Doe"; <br><br>
+                Prueba también esto: <br><br>
+                let x = "5" + 2 + 3; <br><br>
+                <h3>Nota</h3>
+                Si pone un número entre comillas, el resto de los números se tratarán como cadenas y se concatenarán. <br>
+                Ahora prueba esto: <br><br>
+                let x = 2 + 3 + "5"; <br><br>
+            </p>
+        </div>
+        <hr>
+        <div class="dolar">
+            <h2>Signo de dólar en JavaScript $</h2>
+            <p>
+                Dado que JavaScript trata un signo de dólar como una letra, los identificadores que contienen $ son nombres de variables válidas: <br><br>
+                let $ = "Hello Word"; <br>
+                let $$$ = 2; <br>
+                let $myMoney = 5; <br><br>
+                Usar el signo de dolar no es muy común en JavaScript, pero los programadores profesionales a menudo lo usan como un alias para la función principal en una biblioteca JavaScript. <br>
+                En la biblioteca JavaScript jQuery, por ejemplo, la función principal <b>$</b> se usa para seleccionar elementos HTML. En jQuery <b>$("p");</b> significa "seleccionar los elementos p". 
+            </p>
+        </div>
+        <hr>
+        <div class="guion">
+            <h2>Guión bajo en JavaScript</h2>
+            <p>Dado que JavaScript trata al guión bajo como una letra, los identificadores que contienen _ son nombres de variables válidos: <br><br>
+            let _lastNmae = "Johnson"; <br>
+            let _x = 2; <br>
+            let _100 = 5; <br><br>
+            Usar el guión no es muy común en JavaScript, pero una convención entre los programadores profesionales es usarlo como un alias para las variables "privadas (ocultas)". <br><br>
+            </p>
+        </div>
+        <hr>
+        <div class="let">
+            <h2>JavaScript Let</h2>
+            <p>
+                La palabra clave <b>let</b> se introdujo en ES6 (2015). <br>
+                Las variables definidas con <b>let</b> no se pueden volver a declarar. <br>
+                Las variables definidas con <b>let</b> deben declararse antes de su uso. <br>
+                Las variables definidas con <b>let</b> tienen alcance de bloque. <br><br>
+                <h3>No se pueden volver a declarar</h3>
+                Las variables definidad con <b>let</b> no se pueden volver a declarar. <br>
+                No puede volver a declarar accidentalmente una variable declarada con <b>let</b>. <br>
+                Con <b>let</b> usted <b>no</b> puede hacer esto: <br><br>
+                let x = "John Doe"; <br>
+                let x = 0; <br><br>
+                Con <b>var</b> usted puede: <br><br>
+                var x = "John Doe";<br>
+                var x = 0; <br><br>
+            </p>
+        </div>
+        <hr>
+        <div class="ambito">
+            <h2>Ámbito de bloque</h2>
+            <p>
+                Antes de ES6 (2015), JavaScript tenía <b>alcance global</b> y <b>alcance funcional</b>. <br>
+                ES6 introdujo dos nuevas e importantes palabras clave de JavaScript: <b>let</b> y <b>const</b>. <br>
+                Estas dos palabras clave proporcionan <b>Block Scope</b> en JavaScript. <br>
+                No se puede acceder a las variables declaradas dentro de un bloque { } desde fuera del bloque: <br><br>
+                {
+                    let x = 2;
+                } <br>
+                x can NOT be used here <br><br>
+                Las variables declaradas con la palabra clave <b>var</b> NO pueden tener alcance de bloque. <br>
+                Se puede acceder a las variables declaradas dentro de un bloque { } desde fuera del bloque. <br><br>
+                {
+                    var x = 2;
+                } <br>
+                x CAN be used here <br><br>
+            </p>
+        </div>
+        <hr>
+        <div class="redeclaracion">
+            <h2>Redeclaración de variables</h2>
+            <p>
+                Volver a declarar una variable utilizando la palabra clave <b>var</b> puede plantear problemas. <br>
+                Volver a declarar una variable dentro de un bloque también volverá a declarar la varible fuera del bloque: <br><br>
+                var x = 10; <br>
+                Here x is 10 <br>
+                { <br>
+                    var x = 2; <br> Here x is 2 <br>
+                } <br>
+                Here x is 2 <br><br>
+                Redeclarar una variable usando la palabra clave <b>let</b> puede resolver este problema. <br>
+                Volver a declarar una variable dentro de un bloque no volverá a declarar la variable fuera del bloque: <br><br>
+                let x = 10; <br> Here x is 10 <br>
+                { <br>
+                    let x = 2; <br> Here x is 2 <br>
+                } <br>
+                Here x is 10
+            </p>
+        </div>
+        <hr>
+        <div class="compatibilidad">
+            <h2>Compatibilidad con navegador</h2>
+            <p>
+                La palabra clave <b>let</b> no es totalmente compatible con Internet Explorer 11 o anterior. <br>
+                La siguiente tabla define las primeras versiones del navegador con soporte completo para la palabra clave <b>let</b>: 
+            </p>    
+            
+            <div class="w3-responsive">
+                <table class="browserref notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width: 20%;" class="bsChrome" title="bsChrome">
+                            </th>
+                            <th style="width:20%;" class="bsEdge" title="Edge"></th>
+                            <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
+                            <th style="width:20%;" class="bsSafari" title="Safari"></th>
+                            <th style="width:20%;" class="bsOpera" title="Opera"></th>  
+                        </tr>
+                        <tr>
+                            <td>Chrome 49</td>
+                            <td>Edge 12</td>
+                            <td>Firefox 44</td>
+                            <td>Safari 44</td>
+                            <td>Opera 36</td>
+                        </tr>
+                        <tr>
+                            <td>Mar, 2016</td>
+                            <td>Jul, 2015</td>
+                            <td>Jan, 2015</td>
+                            <td>Sep, 2017</td>
+                            <td>Mar, 2016</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr>
+        <div class="redeclarando">
+            <h2>Redeclarando</h2>
+            <p>
+                <b>var</b> Se permite volver a declarar una variable de JavaScript en cualquier parte de un programa: <br><br>
+                var x = 2; <br> now x is 2 <br>
+                var x = 3; <br> now x is 3 <br><br>
+                Con let, NO se permite redeclarar una variable en el mismo bloque: <br><br>
+                var x = 2; // Allowed <br>
+                let x = 3; // Not allowed <br><br>
+                { <br>
+                    let x = 2; // Allowed <br>
+                    let x = 3; // Not allowed <br>
+                } <br><br>
+                { <br>
+                    let x = 2; // Allowed <br>
+                    var x = 3; // Not allowed <br>
+                } <br><br>
+                Redeclarar una variable con <b>let</b>, en otro bloque, ES permitido: <br><br>
+                let x = 2; // Allowed <br>
+                { <br>
+                    let x = 3; // Allowed <br>
+                } <br>
+                {<br>
+                    let x = 4; // Allowed <br>
+                }
+
+            </p>
+        </div>
+        <hr>
+        <div class="hoisting">
+            <h2>Let Hoisting</h2>
+            <p>
+                Las variales definidas con <b>var</b> se elevan a la parte superior y se pueden inicializar en cualquier momento. <br>
+                Significado: puede usar la variable antes de que se declare: <br><br>
+                carName = "Volvo"; <br>
+                var carName; <br><br>
+                Las variables definidas con <b>let</b> también se elevan a la parte superior del bloque, pero no seinicializan. <br>
+                Significado: el uso de una variable <b>let</b> antes de declararla dará como resultado <b>ReferenceError</b>: <br><br>
+                carName = "Saab"; <br>
+                let carName = "Volvo";
+            </p>
+        </div>
+        <hr>
+        <div class="const">
+            <h2>Constantes de JavaScript</h2>
+            <p>
+                La palabra clave <b>const</b> se intodujo en ES6 (2015). <br>
+                Las variables definidas con <b>const</b> no se pueden volver a declarar. <br>
+                Las variables definidas con <b>const</b> no se pueden reasignar. <br>
+                Las variables definidas con <b>const</b> tienen ámbito de bloque. <br><br>
+                <h3>No se puede reasignar</h3>
+                Una variable <b>const</b> no se puede reasignar: <br><br>
+                const PI = 3.141592653589793; <br>
+                PI = 3.14; // This will give an error <br>
+                PI = PI + 10; // This will also give an error <br><br>
+                <h3>Debe ser reasignado</h3>
+                A las varibles de JavaScript <b>const</b> se les debe asignar un valor cuando se declaran:<br>
+                <h4>Correcto:</h4>
+                const PI = 3.141592653589793; <br><br>
+                <h4>Incorrecto:</h4>
+                const PI; <br>
+                PI = 3.141592653589793;
+            </p>
+        </div>
+        <hr>
+        <div>
+            <h2>¿Cuándo usar <b>const</b> en JavaScript?</h2>
+            <p>
+                Siempre declare una variable con <b>const</b> cuando sepa que el valor no debe cambiarse. <br>
+                Use <b>const</b> cuando declare: <br><br>
+                <ul><li>Una nueva matriz</li></ul>
+                <ul><li>Un nuevo objeto</li></ul>
+                <ul><li>Una nueva función</li></ul>
+                <ul><li>Una nueva expresión regular</li></ul>
+            </p>
+        </div>
+        <hr>
+        <div class="obetos-constantes-matrices">
+            <h2>Objetos, constantes y matrices</h2>
+            <p>
+                La palabra clave <b>const</b> es un poco engañosa. <br>
+                No define un valor constante. Define una referencia constante a un valor. <br>
+                Por eso NO puedes: <br><br>
+                <ul><li>Reasignar un valor constante</li></ul>
+                <ul><li>Reasignar una matriz constante</li></ul>
+                <ul><li>Reasignar un objeto constante</li></ul>
+                <br><br>
+                Pero puedes: <br><br>
+                <ul><li>Cambiar los elementos de la matriz constante</li></ul>
+                <ul><li>Cambiar las propiedades del objeto constante</li></ul>
+            </p>
+        </div>
+        <hr>
+        <div class="matrices">
+            <h2>Matrices constantes</h2>
+            <p>
+                Puede cambiar los elementos de una matriz constante: <br><br>
+                // You can create a constant array: <br>
+                const cars = ["Saab", "Volvo", "BMW"]; <br><br>
+                // You can change an element <br>
+                cars [0] = "Toyota"; <br><br>
+                //You can add an element: <br>
+                car.push("Audi"); <br><br>
+                Pero NO puede reasignar la matriz: <br><br>
+                const cars = ["Saab", "Volvo", "BMW"]; <br>
+                cars = ["Toyota", "Volvo", "Audi"]; // ERROR <br><br>
+            </p>
+        </div>
+        <hr>
+        <div class="objetos">
+            <h2>Objetos constantes</h2>
+            <p>
+                Puede cambiar las propiedades de un onjto constante: <br><br>
+                // You can create a const objet: <br>
+                const car = {type: "Fiat", model:"500", color:"white"}; <br><br>
+                // You can change a property: <br>
+                car.color = "red"; <br><br>
+                // You can add a property: <br>
+                car.ower = "Johnson"; <br><br>
+                Pero no puedes reasignar el objeto: <br><br>
+                const car = {type:"Fiat", model:"500", color:"white"}; <br>
+                car = {type:"Volvo", model:"WX60",color:"red"}; // ERROR
+            </p>
+        </div>
+        <hr>
+        <div class="compatibilidad">
+            <h2>Compatibilidad con navegador</h2>
+            <p>
+                La palabra clave <b>const</b> no es totalmente compatible con Internet Explorer. <br>
+                La siguiente tabla define las primeras versiones del navegador con soporte completo para la palabra clave <b>const</b>: <br><br>
+            </p>
+        </div>
+        <div class="w3-responsive">
+            <table class="browserref notranslate">
+                <tbody>
+                    <tr>
+                        <th style="width: 20%;" class="bsChrome" title="bsChrome">
+                        </th>
+                        <th style="width:20%;" class="bsEdge" title="Edge"></th>
+                        <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
+                        <th style="width:20%;" class="bsSafari" title="Safari"></th>
+                        <th style="width:20%;" class="bsOpera" title="Opera"></th>  
+                    </tr>
+                    <tr>
+                        <td>Chrome 49</td>
+                        <td>Edge 12</td>
+                        <td>Firefox 36</td>
+                        <td>Safari 11</td>
+                        <td>Opera 36</td>
+                    </tr>
+                    <tr>
+                        <td>Mar, 2016</td>
+                        <td>Jul, 2015</td>
+                        <td>Jan, 2015</td>
+                        <td>Sep, 2017</td>
+                        <td>Mar, 2016</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class="ambito-de-bloque">
+            <h2>ámbito de bloque</h2>
+            <p>
+                Declarar una variable con <b>const</b> es similar a <b>let</b> cuando se trata de <b>Block Scope</b>. <br>
+                La x declarada en el bloque, en este ejemplo, no es la misma x declarada fuera del bloque: <br><br>
+                const x = 10; <br> // Here x is 10 <br>
+                { <br>
+                    const x = 2; <br> // Here x is 2 br
+                } <br>
+                // Here x is 10 <br><br>
+            </p>
+        </div>
+        <hr>
+        <div class="redeclarado-const">
+            <h2>Redeclarado</h2>
+            <p>
+                <b>var</b> permite volver a declarar una variable de JavaScript en cualquier parte del programa: <br><br>
+                var x = 2; // Allowed<br>
+                var x = 3; // Allowed <br>
+                x = 4; // Allowed <br><br>
+                No se permite redeclarar una variable existente <b>var</b> o a, en el mismo ámbito: <b>let const</b><br><br>
+                var x = 2; // Allowed <br>
+                const x = 2; // Not allowed <br>
+                { <br>
+                    let x = 2; // Allowed <br>
+                    const x = 2; // Allowed <br>
+                }<br>
+                {<br>
+                    const x = 2; // Allowed <br>
+                    const x = 2; // Not allowed <br>
+                } <br><br>
+                No se permite reasignar una variable existente <b>const</b>, en el mismo ámbito: <br><br>
+                const x = 2; // Allowed <br>
+                x = 2; // Not allowed <br>
+                var x = 2; // Not allowed <br>
+                let x = 2; // Not allowed <br>
+                const x = 2; // Not allowed <br>
+                { <br>
+                    const x = 2; // Allowed <br>
+                    x = 2; // Not allowed <br>
+                    var x = 2; // Not allowed <br>
+                    let x = 2; // Not alowed <br>
+                    const x = 2; // Not allowed <br>
+                } <br><br>
+                Se permite redeclarar una variable con <b>const</b>, en otro ámbito o en otro bloque: <br><br>
+                const x = 2; // Allowed <br>
+                { <br>
+                    const x = 3; // Allowed <br>
+                } <br>
+                { <br>
+                    const x = 4; // Allowed <br>
+                }
+    
+            </p>
+        </div>
+        <hr>
+        <div class="hoisting">
+            <h2>Hoisting</h2>
+            <p>
+                Las variables definidas con <b>var</b> se elevan a la parte superior y se pueden inicializar en cualquier momento. <br>
+                Significado: puede usar la variable antes de que se declare: <br><br>
+                carName = "Volvo"; <br>
+                var carName; <br><br>
+                Las variables definidas con <b>const</b> también se elevan a la parte superior, pero no se inicializan. <br>
+                Significado: el uso de una variable <b>const</b> antes de declararla dará como resultado <b>ReferenceError</b>: <br><br>
+                alert (carName); <br>
+                const carName = "Volvo";
+            </p>
+        </div>
+        <hr>
+        <div class="operadores">
+            <h2 style="text-align: center;">Tipos de operadores de JavaScript</h2>
+            <br>
+            <h3>Hay diferentes tipos de operadores de JavaScript:</h3>
+            <ul><li>Operadores aritméticos</li></ul>
+            <ul><li>Operadores de asignación</li></ul>
+            <ul><li>Operadores de comparación</li></ul>
+            <ul><li>Operadores de cadenas</li></ul>
+            <ul><li>Operadores lógicos</li></ul>
+            <ul><li>Operadores bit a bit</li></ul>
+            <ul><li>Operadores ternarios</li></ul>
+            <ul><li>Operadores de tipo</li></ul>
+            <hr>
+            <div class="aritmeticos">
+                <h2>Operadores Aritméticos</h2>
+                <p>
+                    Los utilizamos para realizar operaciones matemáticas básicas. Los más sencillos son los cuatro primeros, que forman parte de las operaciones matemáticas básicas habituales: <br><br>
+    
+                    <b>Suma (+) :</b> <br> a + b <br>Suma el valor de a al valor de b. <br><br>
+    
+                    <b>Resta (-) :</b> <br> a - b <br> Resta el valor de b al valor de a. <br><br>
+    
+                    <b>Multiplicación (*) :</b> <br> a * b <br>Multiplica el valor de a por el valor de b.<br><br>
+    
+                    <b>División(/) :</b> <br> a / b <br> Divide el valor de a entre b.<br><br>
+    
+                    <b>Módulo(%) :</b> <br> a % b <br> Devuelve el resto de la divsión de a entre b.<br><br>
+    
+                    <b>Exponenciación(**) :</b> <br> a ** b <br> Eleva <span>a</span> a la potencia de b.<br><br>
+    
+                </p>
+            </div> 
+            <hr>   
+            <div class="asignacion">
+                <h2>Operadores de Asignación</h2>
+                <p>
+                    Estos operadores nos permiten asignar información a diferentes constantes o variables a través del simbolo =, lo cuál es bastante lógico pues así lo hacemos en matemáticas. <br> No obstante, también existen ciertas contracciones relacionadas con la asignación que nos permiten realizar operaciones de una forma más compacta. Son las siguientes: <br><br>
+                    <b>Asignación:</b> <br> let x = 10; <br> x += 5;
+                </p>
+            </div>
+            <hr>
+            <div class="unarios">
+                <h2>Operadores Unarios</h2>
+                <p>
+                    Son aquellos que en lugar de tener dos operandos, solo tienen uno. Es decir, se realizan sobre un solo valor almacenado en una variable:
+                </p>
+                <div>
+                  <p>
+                    Incremento <br> <b>a++</b> <br>
+                    Usa el valor de a  y luego lo incrementa. También llamado postincremento.
+                  </p>
+                  <p>
+                    Decremento <br> <b>a--</b> <br>
+                    Usa el valor de a y luego lo decrementa. También llamado postdecremento.
+                  </p>
+                  <p>
+                    Incremento previo. <br> <b>++a</b> <br>
+                    incrementa el valor de a y luego lo usa. También llamado preincremento.
+                  </p>
+                  <p>
+                    Decremento previo <br> <b>--a</b> <br>
+                    Decrement el valor de a y luego lo usa. También llamado predecremento.
+                  </p>
+                  <p>
+                    Resta unaria <br> <b>-a</b> <br>
+                    Cambia de signo (niega) a a.
+                  </p>
+                </div>
+            </div>
+            <hr>
+            <div class="comparacion">
+                <h2>Operadores de Comparación</h2>
+                <p>
+                    Son aquellos que utlizamos en nuestro código (generalmente, en el interior de un if, aunque no es el único sitio donde podemos utilizarlos) para relaizar comprobaciones. Estas expresiones de comparación devuelven un Booleano con un valor true o false:
+                </p>
+            </div>
+            <div>
+                Operador de igualdad <b>(==)</b>
+                <br> a == b
+                <p>Comprueba si el valor de a, es igual al valor de b. No comprueba tipo de dato.</p>
+            </div>
+            <br>
+            <div>
+                Operador de desigualdad <b>(!=)</b>
+                <br> a != b
+                <p>Comprueba si el valor de a, no es igual al valor de b. No comprueba tipo de dato.</p>
+            </div>
+            <br>
+            <div>
+                Operador mayor que <b>(>)</b>
+                <br> 7 > 3
+                <p>Comprueba si 7 es mayor que 3.</p>
+            </div>
+            <br>
+            <div>
+                Operador mayor o igual que <b>(>=)</b>
+                <br> 10 >= 9
+                <p>Comprueba si 10 es mayor o igual que 9</p>
+            </div>
+            <br>
+            <div>
+                Operador menor que <b>(<)</b>
+                <br> 2 < 4
+                <p>Comprueba si 2 es menor que 4</p> 
+            </div>
+            <br>
+            <div>
+                Operador menor o iguel que <b>(<=)</b>
+                <br> 5 <= 7
+                <p>Comprueba si 5 es menor o igual que 7</p>
+            </div>
+            <br>
+            <div>
+                Operador de identidad <b>(===)</b>
+                <br> 7 === 7
+                <p>Comprueba si el valor y tipo de dato de 7 es igual.</p>
+            </div>
+            <br>
+            <div>
+                Operador no identico <b>(!==)</b>
+                <br> a !== b
+                <p>Comprueba si el valor y el tipo de dato de a, no es igual al de b.</p>
+            </div>
+            <hr>
+            <div class="binarios">
+                <h2>Operadores Binarios</h2>
+                <p>Se trata de una serie de operadores que nos permiten realizar operaciones básicas trabajando a nivel binario, donde los operadores solo pueden tomar valores de 0 o 1.</p><br>
+                <div>
+                    Operador <b>AND</b>
+                    <br>
+                    a & b
+                    <br>
+                    <p>Devuelve 1 si ambos operadores son 1.</p>
+                </div>
+                <div>
+                    Operador <b>OR</b>
+                    <br>
+                    a | b
+                    <br>
+                    <p>Devuelve 1 si al menos un operando es 1.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="cadenas">
+                <h2>Comparación de cadenas de JavaScript</h2>
+                <p>
+                    let text1 = "A"; <br>
+                    let text2 = "B"; <br>
+                    let result = text1 < text2; <br><br>
+                    Tenga en cuenta que las cadenas se comparan alfabéticamente: <br><br>
+                    let text1 = "20"; <br>
+                    let text2 = "5"; <br>
+                    let result = text1 < text2; <br><br>
+                </p>
+                <h2>Adición de cadenas de JavaScript</h2>
+                <p>
+                    También se puede usar <b>+</b> para agregar (concatenar) cadenas: <br><br>
+                    let text1 = "John"; <br>
+                    let text2 = "Doe"; <br>
+                    let text3 = text1 + " " + text2; <br><br>
+                    El operador de asignacion <b>+=</b> también se puede usar para agregar (concatenar) cadenas: <br><br>
+                    let text1 = "What a very "; <br>
+                    text1 += "nice day"; <br><br>
+                    El resultado será: <br>
+                    What a very nice day <br> <br>
+                    Cuando se usa en cadenas, el operador + se llama operador de concatenación. <br><br>
+                </p>
+                <h2>Adición de cadenas y números</h2>
+                <p>
+                    Agregar dos números devolverá la suma, pero agregar un número y una cadena devolverá una cadena: <br><br>
+                    let x = 5 + 5; <br>
+                    let y = "5" + 5; <br>
+                    let z = "Hello" + 5; <br><br>
+                    El resultado de x , y y z será: <br><br>
+                    10 <br> 55 <br> Hello5
+                </p>
+            </div>
+            <hr>
+            <div class="logicos">
+                <h2>Operadores lógicos de JavaScript</h2>
+                <p>
+                    Los operadores lógicos y de comparación se utilizan para probar <b>true</b> o <b>false</b> <br><br>
+                </p>
+                <h2>Operadores de comparación</h2>
+                <p>
+                    Los operadores de comparación se utilizan en declaracione lógicas para determinar la igualdad o diferencia entre variables o valores. <br><br>
+                    Los operadores de comparación se pueden usar en declaraciones condicionales para comparar valores y tomar medidas según el resultado: <br><br>
+                    if (age < 18) text = "Too young to buy alcohol"; <br><br><hr>
+                </p>
+                <h2>Operadores lógicos</h2>
+                <p>
+                    Los operadores lógicos se utilizan para determinar la lógica entre variables o valores. <br>
+                    Dado que x = 6 y y = 3, la siguiente tabla explica los operadores lógicos: <br><br>
+                </p>
+                <div class="w3-responsive" style="margin:-16px 0">
+                    <table class="ws-table-all notranslate">
+                        <tbody>
+                            <tr>
+                                <th style="width:12%">Operator</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                                <th style="width:10%">Try it</th>
+                            </tr>
+                            <tr>
+                                <td>&&</td>
+                                <td>and</td>
+                                <td>(x < 10 && y > 1) is true</td>
+                                <td>
+                                    <a target= "_blank" class="w3-btn btnsmall" href="tryit.asp?filename=try.js_comparison_or">Try it</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>||</td>
+                                <td>or</td>
+                                <td>(x == 5 || y == 5) is false</td>
+                                <td>
+                                    <a target= "_blank" class="w3-btn btnsmall" href="tryit.asp?filename=try.js_comparison_or">Try it</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>!</td>
+                                <td>not</td>
+                                <td>!(x == y) is true</td>
+                                <td>
+                                    <a target= "_blank" class="w3-btn btnsmall" href="tryit.asp?filename=try.js_comparison_or">Try it</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><br><br>
+                <hr>
+                <div class="consicional">
+                    <h2>Operador condicional</h2>
+                    <p>
+                        JavaScript tambien contiene un operador condicional que asigna un valor a una variable en función de alguna condición. <br><br>
+                        Sintaxis <br>
+                        variablename = (condition) ? value1:value2 <br><br>
+                        Ejemplo <br><br>
+                        let voteable = (age < 18) ? "Too youn": "Old enough"; <br><br>
+                        Si la variable edad es un valor inferior a 18, el valor de la variable votable será "Demasiado joven", de lo contrario, el valor votable será "Suficientemente mayor".
+                    </p>
+                </div>
+                <div>
+                    <h2>Comparando diferentes tipos</h2>
+                    <p>
+                        La comparación de datos de diferentes tipos puede dar resultados inesperados. <br>
+                        Al comparar una cadena con un número, JavaScript convertirá la cadena en un número al realizar la comparación. Una cadena vacía se convierte en 0. Una cadena no númerica se convierte en <b>NaN</b> lo que siempre es <b>false</b>.
+                    </p>
+                    <table class="ws-table-all notranslate">
+                        <tbody>
+                            <tr>
+                                <th>Case</th>
+                                <th>Value</th>
+                                <th style="width:10%">Try</th>
+                            </tr>
+                            <tr>
+                                <td>2 < 12</td>
+                                <td>true</td>
+                                <td>
+                                    <a target="_blank" class="w3-btn btnsmall" href="tryit.asp?filename=try.js_comparison_20">Try it</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2 < "John</td>
+                                <td>false</td>
+                                <td>
+                                    <a target="_blank" class="w3-btn btnsmall" href="tryit.asp?filename=try.js_comparison_20">Try it</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2 > "John"</td>
+                                <td>false</td>
+                                <td>
+                                    <a target="_blank" class="w3-btn btnsmall" href="tryit.asp?filename=try.js_comparison_20">Try it</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2 == "John"</td>
+                                <td>false</td>
+                                <td>
+                                    <a target="_blank" class="w3-btn btnsmall" href="tryit.asp?filename=try.js_comparison_20">Try it</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>"2" < "12"</td>
+                                <td>false</td>
+                                <td>
+                                    <a target="_blank" class="w3-btn btnsmall" href="tryit.asp?filename=try.js_comparison_20">Try it</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>"2" > "12"</td>
+                                <td>true</td>
+                                <td>
+                                    <a target="_blank" class="w3-btn btnsmall" href="tryit.asp?filename=try.js_comparison_20">Try it</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>"2" == "12"</td>
+                                <td>false</td>
+                                <td>
+                                    <a target="_blank" class="w3-btn btnsmall" href="tryit.asp?filename=try.js_comparison_20">Try it</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table><br><br>
+                    <P>
+                        Al comparar dos cadenas, "2" será mayor que "12", porque (alfabéticamente) 1 es menor que 2. <br>
+                        Para asegurar un resultado adecuado, las variables deben convertirse al tipo adecuado antes de la comparación: <br><br>
+                        age = Number(age); <br>
+                        if (isNaN(age)) <br>{ <br>
+                            voteable = "Input is not a number"; <br>
+                        } else { <br>
+                            voteable = (age < 18) ? "Too young" : "Old enough"; <br>
+                        }
+                    </P>
+                </div><hr>
+                <div class="coalescente">
+                    <h2>El operador coalescente nulo (??)</h2>
+                    <p>
+                        El operador <b>??</b> devuelve el primer argumento si no es nulo (null o undefined). <br>
+                        De lo contrario, devuelve el segundo argumento. <br><br>
+                        let name = null; <br>
+                        let text = "missing"; <br>
+                        let result = name ?? text; <br><br>
+                        El operador nulo es compatible con todos los navegadores desde marzo de 2020:
+                        <div>
+                            <table class="browserref notranslate">
+                                <tbody>
+                                    <tr style="height:50px">
+                                        <th style="width:20%;" class="bsChrome" title="Chrome"></th>
+                                        <th style="width:20%;" class="bsEdge" title="Edge"></th>
+                                        <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
+                                        <th style="width:20%;" class="bsSafari" title="Safari"></th>
+                                        <th style="width:20%;" class="bsOpera" title="Opera"></th>
+                                    </tr>
+                                    <tr>
+                                        <td>Chrome 80</td>
+                                        <td>Edge 80</td>
+                                        <td>Firefox 72</td>
+                                        <td>Safari 13.1</td>
+                                        <td>Opera 67</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Feb 2020</td>
+                                        <td>Feb 2020</td>
+                                        <td>Jan 2020</td>
+                                        <td>Mar 2020</td>
+                                        <td>Mar 2020</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> 
+                    </p>
+                </div>
+                <hr>
+                <div class="encadenamiento">
+                    <h2>El operador de encadenamiento opcional (?.)</h2>
+                    <p>
+                        El operador (?.) devuelve undefined si un objeto es undefined o null (en lugar de arrijar un error). <br><br>
+                        // Create an object: <br>
+                        const car = {type: "Fiat", model:"500", color:"white"}; <br><br>
+                        // Ask for  car name : br
+                        document.getElementById("demo").innerHTML = car?.name; <br><br>
+                        El operador de encadenamiento opcional es copatible con todos los navegadores desde marzo desde 2020:
+                        <div>
+                            <table class="browserref notranslate">
+                                <tbody>
+                                    <tr style="height:50px">
+                                        <th style="width:20%;" class="bsChrome" title="Chrome"></th>
+                                        <th style="width:20%;" class="bsEdge" title="Edge"></th>
+                                        <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
+                                        <th style="width:20%;" class="bsSafari" title="Safari"></th>
+                                        <th style="width:20%;" class="bsOpera" title="Opera"></th>
+                                    </tr>
+                                    <tr>
+                                        <td>Chrome 80</td>
+                                        <td>Edge 80</td>
+                                        <td>Firefox 72</td>
+                                        <td>Safari 13.1</td>
+                                        <td>Opera 67</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Feb 2020</td>
+                                        <td>Feb 2020</td>
+                                        <td>Jan 2020</td>
+                                        <td>Mar 2020</td>
+                                        <td>Mar 2020</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="bit">
+                <h2>Operadores de bit a bit de JavaScript</h2>
+                <p>
+                    Los operadores de bits funcionan en números de 32 bits. <br>
+                    Cualquier operando númerico en la operación se convierte en un número de 32 bits. El resultado se vuelve a convertir en un número de JavaScript. <br><br>
+
+                </p>
+            </div>
+            <div class="w3-responsive">
+                <table class="ws-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th style="width:12%">Operator</th>
+                            <th style="width:25%">Description</th>
+                            <th>Example</th>
+                            <th>Same as</th>
+                            <th>Result</th>
+                            <th style="width:15%">Decimal</th>
+                        </tr>
+                        <tr>
+                            <td>&</td>
+                            <td>AND</td>
+                            <td>5 & 1</td>
+                            <td>0101 & 0001</td>
+                            <td>0001</td>
+                            <td>&nbsp;1</td>
+                        </tr>
+                        <tr>
+                            <td>|</td>
+                            <td>OR</td>
+                            <td>5 | 1</td>
+                            <td>0101 | 0001</td>
+                            <td>0101</td>
+                            <td>&nbsp;5</td>
+                        </tr>
+                        <tr>
+                            <td>~</td>
+                            <td>NOT</td>
+                            <td>~ 5</td>
+                            <td>&nbsp;~0101</td>
+                            <td>1010</td>
+                            <td>&nbsp;10</td>
+                        </tr>
+                        <tr>
+                            <td>^</td>
+                            <td>XOR</td>
+                            <td>5 ^ 1</td>
+                            <td>0101 ^ 0001</td>
+                            <td>0100</td>
+                            <td>&nbsp;4</td>
+                        </tr>
+                        <tr>
+                            <td><<</td>
+                            <td>left shift</td>
+                            <td>5 << 1</td>
+                            <td>0101 << 1</td>
+                            <td>1010</td>
+                            <td>&nbsp;10</td>
+                        </tr>
+                        <tr>
+                            <td>>></td>
+                            <td>right shift</td>
+                            <td>5 >> 1</td>
+                            <td>0101 >> 1</td>
+                            <td>0010</td>
+                            <td>&nbsp;2</td>
+                        </tr>
+                        <tr>
+                            <td>>>></td>
+                            <td>unsigned right shift</td>
+                            <td>5 >>> 1</td>
+                            <td>0101 >>> 1</td>
+                            <td>0010</td>
+                            <td>&nbsp;2</td>
+                        </tr>
+                    </tbody>
+                </table> <br><br>
+                Los ejemolos anteriores usan ejemplos sin firmar de 4 bits. Pero JavaScript usa números con signo de 32 bits. <br>
+                Debido a esto, en JavaScript, ~ 5 no deolverá 10. Devolvera -6. <br>
+                ~00000000000000000000000000000101 devolverá <br>
+                111111111111111111111111111111010 <br>
+                <!--fin de tabla -->
+            </div>
+            <!--fin de Operadores -->
+        </div>
+        <hr>
+        <div class="tarea">
+            <h2>Asiganación de JavaScript</h2>
+            <p>
+                Operadores de asignación de JavaScript. <br>
+                Los operadores de asignación asignan valores a las variables  de JavaScript. <br><br>
+            </p>
+            <table class="ws-table-all notranslate">
+                <tbody>
+                    <tr>
+                        <th style="width:30%">Operator</th>
+                        <th>Example</th>
+                        <th>Same As</th>
+                    </tr>
+                    <tr>
+                      <td>=</td>
+                      <td>x = y</td>
+                      <td>x = y</td>  
+                    </tr>
+                    <tr>
+                        <td>+=</td>
+                        <td>x += y</td>
+                        <td>x = x + y</td>
+                    </tr>
+                    <tr>
+                        <td>-=</td>
+                        <td>x -= y</td>
+                        <td>x = x - y</td>
+                    </tr>
+                    <tr>
+                        <td>*=</td>
+                        <td>x *= y</td>
+                        <td>x = x * y</td>
+                    </tr>
+                    <tr>
+                        <td>/=</td>
+                        <td>x /= y</td>
+                        <td>x = x / y</td>
+                    </tr>
+                    <tr>
+                        <td>%=</td>
+                        <td>x %= y</td>
+                        <td>x = x % y</td>
+                    </tr>
+                    <tr>
+                        <td>**=</td>
+                        <td>x **= y</td>
+                        <td>x = x ** y</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h2>Operadores de asignación de turnos</h2>
+            <table class="ws-table-all notranslate">
+                <tbody>
+                    <tr>
+                        <th style="width:30%">Operator</th>
+                        <th>Example</th>
+                        <th>Same As</th>
+                    </tr>
+                    <tr>
+                        <td><<=</td>
+                        <td>x <<= y</td>
+                        <td>x = x << y</td>
+                    </tr>
+                    <tr>
+                        <td>>>=</td>
+                        <td>x >> y</td>
+                        <td>x = x >> y</td>
+                    </tr>
+                    <tr>
+                        <td>>>>=</td>
+                        <td>x >>>= y</td>
+                        <td>x = x >>> y</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h2>Operadores de asignación bit a bit</h2>
+            <table class="ws-table-all notranslate">
+                <tbody>
+                    <tr>
+                        <th style="width:30%">Operator</th>
+                        <th>Example</th>
+                        <th>Same As</th>
+                    </tr>
+                    <tr>
+                        <td>&=</td>
+                        <td>x &= y</td>
+                        <td>x = x & y</td>
+                    </tr>
+                    <tr>
+                        <td>^=</td>
+                        <td>x ^= y</td>
+                        <td>x = x ^= y</td>
+                    </tr>
+                    <tr>
+                        <td>|=</td>
+                        <td>x |= y</td>
+                        <td>x = x | y</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h2>Operadores de asignación lógica</h2>
+            <table class="ws-table-all notranslate">
+                <tbody>
+                    <tr>
+                        <th style="width:30%">Operator</th>
+                        <th>Example</th>
+                        <th>Same As</th>
+                    </tr>
+                    <tr>
+                        <td>&&=</td>
+                        <td>x &&= y</td>
+                        <td>x = x && (x = y)</td>
+                    </tr>
+                    <tr>
+                        <td>||=</td>
+                        <td>x ||= y</td>
+                        <td>x = x ||= (x = y)</td>
+                    </tr>
+                    <tr>
+                        <td>??=</td>
+                        <td>x ??= y</td>
+                        <td>x = x ?? (x = y)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h2>El operador de asignación simple (=)</h2>
+            <p>
+                El operador de asignación simple asigna un valor a una variable. <br><br>
+                let x = 10; <br>
+                let x = 10 + y;
+            </p>
+            <hr>
+            <h2>El operador de asignación de suma (+=)</h2>
+            <p>
+                El operador de asignación de suma agrega un valor a una variable. <br><br>
+                let x = 10; <br>
+                x += 5; <br>
+                let text = "Hello"; test += " World";
+            </p>
+            <hr>
+            <h2>El operador de asignación de resta (-=) </h2>
+            <p>
+                El operado de asignación de resta, resta un valor de una variable. <br><br>
+                let x = 10; <br>
+                x -= 5;
+            </p>
+            <hr>
+            <h2>El operador (*=) </h2>
+            <p>
+                El operador de asignación de multiplicación multiplica una variable. <br><br>
+                let x = 10; <br>
+                x *= 5;
+            </p>
+            <hr>
+            <h2>El operador (**=)</h2>
+            <p>
+                El operador de asignación de exponenciación eleva una variable a la potencia del operando. <br><br>
+                let x = 10; <br>
+                x **= 5;
+            </p>
+            <hr>
+            <h2>El operador (/=)</h2>
+            <p>
+                El operador de asignación de división divide una variable. <br><br>
+                let x = 10; <br>
+                x /= 5;
+            </p>
+            <hr>
+            <h2>El operador (&=)</h2>
+            <p>
+                El operador de asignación de resto asigna un resto a una variable. <br><br>
+                let x = 10; <br>
+                x %= 5;
+            </p>
+            <hr>
+            <h2>operador (<<=) </h2>
+            <p>
+                operador de asignación de desplazamiento a la izquierda desplaza a la izquierda una variable. <br><br>
+                let x = -100; <br>
+                x <<= 5;
+            </p>
+            <hr>
+            <h2>El operador (>>=) </h2>
+            <p>
+                El operador de asignación de desplazamiento a la derecha desplaza a la derecha una variable (con signo). <br><br>
+                let x = -100; <br>
+                x >>= 5;
+            </p>
+            <hr>
+            <h2>El operador (>>>=) </h2>
+            <p>
+                El operador de asignación de desplazamiento a la derecha sin signo desplaza a la derecha una variable (sin signo). <br><br>
+                let x = -100; <br>
+                x >>>= 5;
+            </p>
+            <hr>
+            <h2>El operador (&=) </h2>
+            <p>
+                El operador de asignación AND bit a bit realiza una operación AND bit a bit en dos operando y asigna el resultado a la variable. <br><br>
+                let x = 10; <br>
+                x &= 5;
+            </p>
+            <hr>
+            <h2>El operador (|=) </h2>
+            <p>
+                El operador de asignación OR bit a bit realiza una operación OR bit a bit en dos operandos y asigna el resultado a la variable. <br><br>
+                let x = 10; <br>
+                x |= 5;
+            </p>
+            <hr>
+            <h2>El operador ^=</h2>
+            <p>
+                El operador de asignación Bitwise XOR realiza una operación Bitwise XOR en dos operandos y asigna el resultado a la variable. <br><br>
+                let x = 10; <br>
+                x ^= 5;
+            </p>
+            <hr>
+            <h2>El operador (&&=) </h2>
+            <p>
+                El operador de asignación AND lógico se utiliza entre dos valores. <br>
+                Si el primero es verdadero, se asigna el segundo valor. <br><br>
+                let x = 10; <br>
+                x &&= 5;
+            </p>
+            <hr>
+            <h2>El operador (||=) </h2>
+            <p>
+                El operador de asignación OR lógico se utiliza entre dos valores. <br>
+                Si el primer valor es falso, se asigna el segundo valor. <br><br>
+                let x = 10; <br>
+                x ||= 5;
+            </p>
+            <hr>
+            <h2>El operador (??=) </h2>
+            <p>
+                El operador de asignación de fusión nula se utiliza entre dos valores. <br>
+                Si el primer valor no esta definido o es nulo, se asigna el segundo valor. <br><br>
+                let x = 10; <br>
+                x ??= 5;
+            </p>
+            <!-- Fin de tarea -->
+        </div>
+        <hr>
+        <div class="datos">
+            <h2>Tipos de datos de JavaScript</h2>
+            <p>
+                JavaScript tiene 8 tipos de datos <br><br>
+                1. Cadena <br>
+                2. Número <br>
+                3. Bigint <br>
+                4. Booleano <br>
+                5. Indefinido <br>
+                6. Nulo <br>
+                7. Símbolo <br>
+                8. Objeto
+            </p>
+            <br>
+            <h3>El tipo de dato del objeto</h3>
+            <p>
+                El tipo de dato del objeto puede contener: <br><br>
+                1. Un objeto <br>
+                2. Una matriz <br>
+                3.Una fecha <br><br>
+                // Numbers: <br><br>
+                let length = 16; <br>
+                let weight = 7.5; <br><br>
+                // Strngs: <br><br>
+                let color = "Yellow"; <br>
+                let lastName = "Johnson"; <br><br>
+                // Booleans <br><br>
+                let x = true; <br>
+                let y = false; <br><br>
+                // Object: <br><br>
+                const person = {firstName: "John", lastName: "Doe"}; <br><br>
+                // Array object <br><br>
+                const cars = ["Saab", "Volvo", "BMW"]; <br><br>
+                // Date object: <br><br>
+                const date = new Date("2022-03-25"); <br><br>
+                Nota <br>
+                Una variable de JavaScript puede contener cualquier tipo de dato.
+            </p>
+            <hr>
+            <h2>El concepto de tipo de datos</h2>
+            <p>
+                En programación, los tipos de dato son un concepto importante. Para poder operar sobre variables, es importante saber algo sobre el tipo. Sin tipos de datos, un a computadora no puede resolver esto de manera segura: <br><br>
+                let x = 16 + "Volvo"; <br><br>
+                ¿Tiene algún sentido agregar "Volvo" a dieciséis? ¿Producirá un error o producirá un resultado? <br>
+                JavaScript tratará el ejemplo anterior como: <br><br>
+                let x = "16" + "Volvo"; <br><br>
+                Nota <br>
+                Al agregar un número y una caedna, JavaScript tratará el número como una cadena. <br><br>
+                let x = 16 + "Volvo"; <br><br>
+                let x = "Volvo" + 16; <br><br>
+                JavaScript evalúa las expresiones de izquierda a derecha. Diferentes secuencias pueden reproducir diferentes resultados: <br><br>
+                let x = 16 + 4 + "Volvo"; <br>
+                Resultado: <br><br>
+                20Volvo <br><br>
+                let x = "Volvo" + 16 + 4; <br>
+                Resultado: <br><br>
+                Volvo164 <br><br>
+                En el primer ejemplo, JavaScript trata el 16 y el 4 como números, hasta que llega "Volvo". <br>
+                En el segundo ejemplo, dado que el primer operando es una cadena, todos los operandos se tratan como cadenas.
+            </p>
+            <hr>
+            <h2>Los tipos de JavaScript son dinámicos</h2>
+            <p>
+                JavaScript tiene tipos dinámicos. Esto significa que la misma variable se puede utilizar para concatenar diferentes tipo de datos. <br><br>
+                let x; // Now x is undefined <br>
+                x = 5; // Now x is a Number <br>
+                x = "John"; // Now x is a String
+            </p>
+            <hr>
+            <h2>Cadenas JavaScript</h2>
+            <p>
+                Una cadena (o una cadena de texto) es una serie de caracteres como "John Doe" <br>
+                Las cadenas se escriben con comillas. Pueden utilizar comillas simples o dobles: <br><br>
+                // Using double quotes: <br>
+                let carName = "Volvo XC60" <br><br>
+                // Using single quotes: <br>
+                let carName2 = 'Volvo XC60'; <br><br>
+                Puede usar comillas dentro de una cadena, siempre que no coincidan con las comillas que la rodean: <br><br>
+                // Single quote inside double quotes: <br>
+                let answer1 = "It's alright"; <br><br>
+                // Single quotes inside double quotes: <br>
+                let answer2 = "He is called 'Johnny'"; <br><br>
+                // Double quotes inside single quotes: <br>
+                let answer3 = 'He is called "Johnny"'; 
+            </p>
+            <hr>
+            <h2>Números JavaScript</h2>
+            <p>
+                Todos los números de JavaScript se almacenan como números decimales (coma flotante). <br>
+                Los números se pueden escribir con o sin decimales: <br><br>
+                //With decimals: <br>
+                let x1 = 34.00; <br><br>
+                // Without decimals: <br>
+                let x2 = 34;
+            </p>
+            <hr>
+            <h2>Notación exponencial</h2>
+            <p>
+                Los números extra grandes o extra pequeños se pueden escribir con notación científica (exponencial): <br><br>
+                let y = 123e5; // 12300000 <br>
+                let z = 123e-5; // 0.00123 <br><br>
+                Nota <br>
+                La mayoría de los lenguaes de programación tienen mjuchos tipos de números: <br>
+                Números enteros: <br><br>
+                byte (8 bits), corto (16 bits), int (32 bits), largo (64 bits) <br><br>
+                Números reales (coma flotante): <br><br>
+                flotante (32 bits), double (64 bits). <br><br>
+                Los números de Javascript son siempre de un tipo: doble (coma flotante de 64 bits).
+            </p>
+            <hr>
+            <h2>JavaScript BigInt</h2>
+            <p>
+                Todos los números de JavaScript se almacenan en un formato de coma flotante de 64 bits. <br>
+                JavaScript BigInt es un nuevo tipo de dato (ES2020) que se puede usar para almacena valores enteros que son demasiado grandes para ser representados por un número de JavaScript normal. <br><br>
+                let x = BigInt("123456789012345678901234567890");
+            </p>
+            <hr>
+            <h2>Booleanos de JavaScript</h2>
+            <p>
+                Los valores booleanos solo pueden tener dos valores: true o false. <br><br>
+                let x = 5; <br>
+                let y = 5; <br>
+                let z = 6; <br>
+                (x == y) // Returns true <br>
+                (x == z) // Returns false <br><br>
+                Los booleanos se utilizan a menudo en pruebas condicionales.
+            </p>
+            <hr>
+        </div>
+        <div class="matriz">
+            <h2>Matrices de JavaScript</h2>
+            <p>
+                Las matrices de JavaScript se escriben en corchetes, los elementos de la matriz están separadas por comas. <br>
+                El siguienete código declara (crea) una matriz llamada cars, que contiene tres elementos (nombres de automóviles): <br><br>
+                const cars = ["Saab", "Volvo", "BMW"]; <br><br>
+                Los indices de matriz se basan en cero, lo que significa que el primer elemento es [0], el segundo es [1] y asi sucesivamente.
+            </p>
+            <hr>
+        </div>
+        <div class="objetos">
+            <h2>Objetos de Javascript</h2>
+            <p>
+                Los objetos de JavaScript se escriben con llaves {}. 
+                <br>
+                Las prioridades de los objetos se escriben en pares nombre:valor, separados por comas. <br><br>
+                const person = {firstName: "John", lastName:"Doe", age: 50, eyeColor:"blue"}; <br><br>
+                El objeto (persona) en el ejemplo anterior tiene 4 propiedades: nombre, apellido, edad y color de ojos.
+            </p>
+        </div>
+        <hr>
+        <div class="typeof">
+            <h2>El tipo de operador</h2>
+            <p>
+                Puede utilizar el operador typeof de JavaScript para encontrar el tipo de una variable de JavaScript. El operador typeof devuelve el tipo de una variable o una expresión: <br><br>
+                typeof "" // Returns "string" <br>
+                typeof "John" // Returns "string" <br>
+                typeof "John Doe" // "string" <br><br>
+                typeof 0 // Returns "number" <br>
+                typeof 314 // Returns "number" <br>
+                typeof 3.14 // Returns "number" <br>
+                typeof (3) // Returns "number" <br>
+                typeof (3 + 4) // Returns "number" <br>
+            </p>
+        </div>
+        <hr>
+        <div class="undefined">
+            <h2>Undefined</h2>
+            <p>
+                En JavaScript, una variable sin valor, tiene el valor undefined. El tipo también lo es undefined. <br><br>
+                let car; // Value is undefinied, type is undefined <br><br>
+                Cualquier variable se puede vaciar, estableciendo el valor en undefined. El tipo también será undefined. <br><br>
+                car = undefined; // Value is undefined, type is undefined 
+            </p>
+        </div>
+        <hr>
+        <div class="vacios">
+            <h2>Valores vacíos</h2>
+            <p>
+                Un valor vacío no tiene nada que ver con undefined. Una cadena vacía tiene tanto un valor legal como un tipo. <br><br>
+                let car = ""; // The value is "", the typeof is "string"
+            </p>
+        </div>
+        <hr>
+        <div class="funciones">
+            <h2>Funciones</h2>
+            <p>
+                Una función de JavaScript es un bloque de código diseñado para realizar una tarea en particular. Una función de JavaScript se ejecuta cuando "algo" la invoca (lo llama). <br><br>
+                // Funcio  to compute the product of p1 and p2 <br><br>
+                funtion myFuntion (p1, p2) { <br>
+                    return p1 * p2 <br>
+                }
+            </p>
+            <br><br>
+            <h2>Sintaxis de funciones de JavaScript</h2>
+            <p>
+                Una función de JavaScript se define con la palabra clave funtion, seguida de un nombre, seguido de un paréntesis (). <br>
+                Los nombres de funciones pueden contener letras, dígitos, subrayados y signos de dólar (las mismas reglas que las variables). <br>
+                Los paréntesis pueden incluir nombres de parámetros separados por comas: <br>
+                (parametro1, paramtro2, ...) <br>
+                El código a ejecutar, por la función, se coloca entre llaves: {} <br><br>
+                function name(parameter1, parameter2, parameter3) {<br>
+                    // code to be executed <br>
+                } <br><br>
+                Los parámetros de la función se enumeran entre paréntesis () en la definición de la función. <br>
+                Los argumentos de la función son los valores recibidos por la función cuando se invoca. <br>
+                Dentro de la función, los argumentos (los parámetros) se comportan como variables locales.
+            </p>
+            <br><br>
+            <h2>Invocación de funciones</h2>
+            <p>
+                El código dentro de la función se ejecutará cuando "algo" invoque (llame) a la función: <br><br>
+                <ul><li>Cuando ocurre un evento (cuando un usuario hace click en un botón)</li></ul>
+                <ul><li>Cuando se invoca (llama) desde código JavaScript</li></ul>
+                <ul><li>Automáticamente (auto invocado)</li></ul>
+            </p>
+            <br><br>
+            <h2>Retorno de función</h2>
+            <p>
+                Cuando Javascript llega a una declaración return, función dejará de ejecutarse. <br>
+                Si la función se invocó desde una declaración, JavaScript "regresará" para ejecutar el código después de la declaración de invocación. <br>
+                Las funciones suelen calcular un valor de retorno. El valor de retorno se "devuelve" a la "persona que llama": <br><br>
+                Calcula el producto de dos números y devuelve el resultado: <br><br>
+                let x = myFunction(4, 3); // Function is called, return value will ed up in x <br><br>
+                function myFunction(a, b) { <br>
+                    return a * b; // Function returns the product of a and b <br>
+                }
+                <br><br>
+                El resultado en x será: <br>
+                12
+            </p>
+            <br><br>
+            <h2>¿Por qué funciones?</h2>
+            <p>
+                Puede reutilizar el código: defina el código una vez y utilicelo muchas veces. <br>
+                Puede usar el mismo código muchas veces con diferentes argumentos para producir resultados diferentes. <br><br>
+                Convertir Fahrenheit a Celsius: <br><br>
+                function toCelsius(farenheit) { <br>
+                    return (5/9) * (farenheit-32); <br>
+                } <br>
+                document.getElementById("demo").innerHTML = toCelsius(77);
+            </p>
+            <br><br>
+            <h2>El operador () invoca la función</h2>
+            <p>
+                Usando el ejemplo anterior, toCelsius se refiere al objeto de la función y toCelsius() se refiere al resultado de la función. <br>
+                Acceder a una función sin () devolverá el objeto de la función en lugar del resultado de la función. <br><br>
+                function toCelsius(farenheit) { <br>
+                    return (5/9) * (farenheit-32); <br>
+                } <br>
+                document.getElementById("demo").innerHTML = toCelsius;
+            </p>
+            <br><br>
+            <h2>Funciones utilizadas como valores de variables</h2>
+            <p>
+                Las funciones se pueden usar de la misma manera que se usan las variables, en todo tipo de fórmulas, asignaciones y cálculos. <br><br>
+                En lugar de usar una variable para almacenar el valor de retorno de una función: <br><br>
+                let x = toCelsius(77); <br>
+                let text = "The temperature is " + x + " Celsius"; <br><br>
+                Puede usar la función directamente, como un valor variable: <br><br>
+                let text = "The temperature is " + toCelsius(77) + " Celsius";
+            </p>
+            <br><br>
+            <h2>Variables locales</h2>
+            <p>
+                Las variables locales declaradas dentro de una función de JavaScript se vuelven locales para la función. Solo se ueden acceder a las variables locales desde dentro de la función. <br><br>
+                // code here can NOT use carName <br><br>
+                function myFunction() {<br>
+                    let carName = "Volvo"; <br>
+                    // code here CAN use carName <br>
+                } <br>
+                // code here can NOT use carName <br><br>
+                Dado que las variables locales solo se reconocen dentro de sus funciones, las variables con el mismo nombre se pueden usar en diferentes funciones. <br>
+                Las variables locales se crean cuando se inicia una función y se leimina cuando se completa la función.
+            </p>
+            <!-- termina funciones -->
+        </div>
+        <hr>
+        <div class="objetos-js">
+            <h2>Objetos JavaScript</h2>
+            <h3>Objetos, propiedades y métodos de la vida real</h3>
+            <p>
+                En la vida real, un automóvil es un objeto. <br>
+                Un automóvil tiene propiedades como peso y color, y métodos como iniciar y detener:
+            </p>
+            <div class="w3-responsive">
+                <table class="ws-table-all" style="margin:6px 0">
+                    <tbody>
+                        <tr>
+                            <th style="width:370px">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit">
+                                        Objeto
+                                    </font>
+                                </font>
+                            </th>
+                            <th>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit">
+                                        Proiedades
+                                    </font>
+                                </font> 
+                            </th>
+                            <th>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit">
+                                        Métodos
+                                    </font>
+                                </font>
+                            </th>
+                        </tr>
+                        <tr style="background-color: white;color:#000;">
+                           <img src="objectExplained.gif" style="width:70%;height:230px;margin-left:-68px;margin-top:-10px">
+                           <td>
+                            <br>
+                            <font style="vertical-align:inherit;">
+                                <font style="vertical-align:inherit;">car.name = Fiat</font>
+                            </font>
+                            <br>
+                            <br>
+                            <font style="vertical-align:inherit;">
+                                <font style="vertical-align:inherit;">car.model = 500</font>
+                            </font>
+                            <br>
+                            <br>
+                            <font style="vertical-align:inherit;">
+                                <font style="vertical-align:inherit;">car.weight = 850kg</font>
+                            </font>
+                            <br>
+                            <br>
+                            <font style="vertical-align:inherit;">
+                                <font style="vertical-align:inherit;">car.color = blanco</font>
+                            </font>
+                           </td>
+                           <td>
+                            <font style="vertical-align:inherit;">
+                                <font style="vertical-align:inherit;">coche.arranque()</font>
+                            </font>
+                            <br>
+                            <br>
+                            <font style="vertical-align:inherit;">
+                                <font style="vertical-align:inherit;">coche.conducir()</font>
+                            </font>
+                            <br>
+                            <br>
+                            <font style="vertical-align:inherit;">
+                                <font style="vertical-align:inherit;">coche.freno()</font>
+                            </font>
+                            <br>
+                            <br>
+                            <font style="vertical-align:inherit;">
+                                <font style="vertical-align:inherit;">coche.parada()</font>
+                            </font>
+                            <br>
+                            <br>
+                           </td>
+                        </tr>
+                    </tbody>
+                </table> <br>
+                Todos los autos tienen las mismas propiedades, pero los valores de las propiedades difieren de un auto a otro. <br>
+                Todos los autos tienen los mismos métodos, pero los métodos se realizan en momentos diferentes.
+            </div>
+            <!-- termina objetos-js -->
+        </div>
+        <hr>
+        <div class="obj">
+            <h2>Objetos JavaScript</h2>
+            <p>
+                Ya aprendió que las variables de JavaScript son contenedores para los valores de datos. <br><br>
+                En este código asigna un valor simple (Fiat) a una variable llamada car: <br><br>
+                let car = "Fiat"; <br><br>
+                Los objetos también son variables. Pero los objetos pueden contener muchos valores. <br>
+                Este código asigna muchos valores (Fiat, 500, blanco) a una variable denominada automóvil: <br><br>
+                const automóvil = {type:"Fiat", model: "500", color: "white"}; <br><br>
+                Los valores se escriben como pares nombre:valor (nombre y valor separados por dos puntos). Es una práctica común declarar objetos con la palabra clave const.
+            </p>
+        </div>
+        <hr>
+        <div class="definicion">
+            <h2>Definición de objeto</h2>
+            <p>
+                Usted define (y crea) un obejeto JavaScript con un objeto literal: <br><br>
+                const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}; <br><br>
+                Los espacios y saltos de línea no son importantes. Una definición de objeto puede abarcar varias líneas: <br><br>
+                const person { <br>
+                    firstName: "John", <br>
+                    lastName: "Doe", <br>
+                    age: 50,<br>
+                    eyeColor: "blue" <br>
+                };
+            </p>
+        </div>
+        <hr>
+        <div class="propiedades">
+            <h2>Propiedades del objeto</h2>
+            <p>
+                Los pares nombre:valores en los objetos de         Javascript se denominan propiedades: <br><br>
+            </p>
+           <table class="ws-table-all">
+            <tbody>
+                <tr>
+                    <th style="width:20%">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                Proiedad
+                            </font>
+                        </font> 
+                    </th>
+                    <th>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                El valor de la propiedad
+                            </font>
+                        </font> 
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                nombre de pila
+                            </font>
+                        </font> 
+                    </td>
+                    <td>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                John
+                            </font>
+                        </font> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                Apellido
+                            </font>
+                        </font> 
+                    </td>
+                    <td>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                Gama
+                            </font>
+                        </font> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                edad
+                            </font>
+                        </font> 
+                    </td>
+                    <td>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                50
+                            </font>
+                        </font> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                color de los ojos
+                            </font>
+                        </font> 
+                    </td>
+                    <td>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                azul
+                            </font>
+                        </font> 
+                    </td>
+                </tr>
+            </tbody>
+           </table>
+           <hr>
+        </div>
+        <h2>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    Acceso a las propiedades del objeto
+                </font>
+            </font> 
+        </h2>
+        <p>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    Puede acceder a las propiedades de los objetos de dos formas:
+                </font>
+            </font> 
+        </p>
+        <div class="w3-exmple">
+            <div class="w3-code notranslate jsHigh">
+                <span class="jscolor" style="color:black">
+                    <i>
+                        objectName.
+                        <span class="jspropertycolor" style="color:black">
+                            propertyName
+                        </span>
+                    </i>
+                </span>
+            </div>
+        </div>
+        <p>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    o
+                </font>
+            </font> 
+        </p>
+        <div class="w3-example">
+            <div class="w3-code notranslate jsHigh">
+                <span class="jscolor" style="color:black">
+                    <i>
+                        objectName[
+                        <span class="jsstringcolor" style="color:brown"> "propertyName"
+                        </span>
+                        ]
+                    </i>
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class="w3-example">
+            <h3>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit">
+                        Ejemplo 1
+                    </font>
+                </font> 
+            </h3>
+            <div class="w3-code notranslate jsHigh">
+                <span class="jscolor" style="color:black">
+                    person.
+                    <span class="jspropertycolor" style="color:black">
+                        lastName
+                    </span>
+                    ;
+                    <span class="jsnumbercolor" style="color:red"></span>
+                </span>
+            </div>
+            <a taget="_blank" class="w3-btn w3-margin-bottom" href="tryit.asp?filename=try.js_objects_properties_1">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit">
+                        Inténtalo tú mismo
+                    </font>
+                </font> 
+            </a>
+        </div>
+        <div class="w3-example">
+            <h3>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit">
+                        Ejemplo 2
+                    </font>
+                </font> 
+            </h3>
+            <div class="w3-code notranslate jsHigh">
+                <span class="jscolor" style="color:black">
+                    <span class="jsnumbercolor" style="color:red"> </span>person[
+                    <span class="jsstringcolor" style="color:brown">"lasName"</span>
+                </span>
+                ];
+                <span class="jsnumbercolor" style="color:red"> </span>
+            </div>
+            <a taget="_blank" class="w3-btn w3-margin-bottom" href="tryit.asp?filename=try.js_objects_properties_1">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit">
+                        Inténtalo tú mismo
+                    </font>
+                </font> 
+            </a>
+        </div>
+        <div class="w3-panel w3-note">
+            ::before
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit">
+                        Los objetos de JavaScript son contenedores para
+                    </font>
+                </font>
+                <strong>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit">
+                            valores con nombre
+                        </font>
+                    </font>
+                </strong>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit">
+                        llamados propiedades.
+                    </font>
+                </font>
+            </p>
+            ::after
+        </div>
+        <hr>
+        <h2>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    Métodos de objeto
+                </font>
+            </font>
+        </h2>
+        <p>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    Los objetos también pueden tener
+                </font>
+            </font>
+            <strong>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit">
+                        métodos
+                    </font>
+                </font>
+            </strong>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    .
+                </font>
+            </font>
+        </p>
+        <p>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    Los métodos son
+                </font>
+            </font>
+            <strong>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit">
+                        acciones
+                    </font>
+                </font>
+            </strong>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    que se puede realizar sobre los objetos.
+                </font>
+            </font>
+        </p>
+        <p>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    Los métodos se almacenan en propiedades como
+                </font>
+            </font>
+            <strong>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit">
+                        definiciones de función
+                    </font>
+                </font>
+            </strong>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    .
+                </font>
+            </font>
+        </p>
+        <table class="ws-table-all">
+            <tbody>
+                <tr>
+                    <th style="width:20%">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                Propiedad
+                            </font>
+                        </font>
+                    </th>
+                    <th>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                El valor de la propiedad
+                            </font>
+                        </font>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                nombre de pila
+                            </font>
+                        </font>
+                    </td>
+                    <td>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                John
+                            </font>
+                        </font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                apellido
+                            </font>
+                        </font>
+                    </td>
+                    <td>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                Gama
+                            </font>
+                        </font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                edad
+                            </font>
+                        </font>
+                    </td>
+                    <td>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                50
+                            </font>
+                        </font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                color de ojos
+                            </font>
+                        </font>
+                    </td>
+                    <td>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                azul
+                            </font>
+                        </font>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                nombre completo
+                            </font>
+                        </font>
+                    </td>
+                    <td>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit">
+                                function() {devuelve este.nombre + " " + este.apellido;}
+                            </font>
+                        </font>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="w3-panel w3-note">
+            ::before
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit">
+                        Un método es una función almacenada como una propiedad.
+                    </font>
+                </font>
+            </p>
+            ::after
+        </div>
+        <hr>
+        <div class="w3-exmple">
+            <h3>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit">
+                        Ejemplo
+                    </font>
+                </font>
+            </h3>
+            <div class="w3-code notranslate jsHigh">
+                <span class="jscolor" style="color:black">
+                    <span class="jskeywordcolor" style="color:mediumblue">const</span>
+                    person = {
+                        <br>
+                        <span class="jsnumbercolor" style="color:red"> </span>
+                        &nbsp; firstName: 
+                        <span class="jsstringcolor" style="color:brown">"John"</span>;
+                        <br>
+                        <span class="jsnumbercolor" style="color:red"> </span>
+                        &nbsp; lastName : 
+                        <span class="jsstringcolor" style="color:brown">"Doe"</span>,
+                        <br>
+                        <span class="jsnumbercolor" style="color:red"></span>
+                        &nbsp; id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;
+                        <span class="jsnumbercolor" style="color:red">5566</span>,
+                        <br>
+                        <span class="jsnembercolor" style="color:red"> </span>
+                        &nbsp; fullName : 
+                        <span class="jskeywordcolor" style="color:mediumblue">function</span>
+                        () { 
+                        <br>
+                        <span class="jsnumbercolor" style="color:red"> </span>
+                        &nbsp;&nbsp;&nbsp;
+                        <span class="jskeywordcolor" style="color:mediumblue">return</span>
+                        <span class="jskeywordcolor" style="color:mediumblue">this</span>.
+                        <span class="jspropertycolor" style="color:black">firstName</span> +
+                        <span class="jsstringcolor" style="color:brown">" " </span> +
+                        <span class="jskeywordcolor" style="color:mediumblue">this</span>.
+                        <span class="jpropertycolor" style="color:black">lastName</span>;
+                        <br>
+                        &nbsp;&nbsp;}
+                        <br>
+                        <span class="jsnumbercolor" style="color:red"></span>
+                    };
+                    <span class="jsnumbercolor" style="color:red"></span>
+                </span>
+            </div>
+        </div>
+        <p>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    En el ejemplo anterior,
+                </font>
+            </font>
+            <code class="w3-codespan">this</code>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    se refiere al
+                </font>
+            </font>
+            <strong>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit">
+                        objeto persona
+                    </font>
+                </font>
+            </strong>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    .
+                </font>
+            </font>
+        </p>
+        <p>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    IE
+                </font>
+            </font>
+            <strong>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit">
+                        this.firstName
+                    </font>
+                </font>
+            </strong>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    significa la
+                </font>
+                <font style="vertical-align: inherit">
+                    propiedad
+                </font>
+            </font>
+            <strong>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit">
+                        firstName de
+                    </font>
+                </font>
+            </strong>
+            <font style="vertical-align: inherit"></font>
+            <strong>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit">
+                        this
+                    </font>
+                </font>
+            </strong>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    .
+                </font>
+            </font>
+        </p>
+        <p>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    IE
+                </font>
+            </font>
+            <strong>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit">
+                        this.firstName
+                    </font>
+                </font>
+            </strong>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    significa la
+                </font>
+                <font style="vertical-align: inherit">
+                    propiedad
+                </font>
+            </font>
+            <strong>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit">
+                        firstName de
+                    </font>
+                </font>
+            </strong>
+            <font style="vertical-align: inherit"></font>
+            <strong>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit">
+                        person
+                    </font>
+                </font>
+            </strong>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit">
+                    .
+                </font>
+            </font>
+        </p>
+        <hr>
+        
+    </div>
+
+    
     <script src="index.js" ></script>
 </body>
 </html>
