@@ -1,1 +1,1 @@
-# practicas-js
+# pruebas-js
